@@ -1,0 +1,495 @@
+@font-face {
+  font-family: playfairDisplay;
+  src: url("PlayfairDisplay-VariableFont_wght.ttf");
+}
+@font-face {
+  font-family: hind;
+  src: url("Hind-Regular.ttf");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@media screen and (min-width: 280px) {
+  html {
+    font-size: 50%;
+  }
+}
+@media screen and (min-width: 320px) {
+  html {
+    font-size: 75%;
+  }
+}
+@media screen and (min-width: 768px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  html {
+    font-size: 90%;
+  }
+}
+@media screen and (min-width: 1280px) {
+  html {
+    font-size: 100%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  /* Styles for medium to large desktops */
+  html {
+    font-size: 130%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 130%;
+  }
+}
+body {
+  background-image: url("backgroundImage.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  background-size: cover;
+  font-family: hind;
+  color: #000;
+}
+@media screen and (max-width: 768px) {
+  body {
+    background-position: right;
+  }
+}
+
+.landingPage-container {
+  position: relative;
+  z-index: 10;
+  height: 100%;
+  width: 100%;
+}
+.landingPage-container .landingPage {
+  height: 100%;
+  width: 100%;
+}
+.landingPage-container .landingPage-top {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+@media screen and (max-width: 1024px) {
+  .landingPage-container .landingPage-top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.landingPage-container .landingPage-top-left {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-items: space-between;
+  align-items: space;
+  position: relative;
+}
+.landingPage-container .landingPage-top-left .imageLeftContainer {
+  height: 100%;
+  width: 100%;
+}
+@media screen and (max-width: 1024px) {
+  .landingPage-container .landingPage-top-left {
+    width: 100vw;
+  }
+}
+.landingPage-container .landingPage-top-left-content {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.landingPage-container .landingPage-top-left-content-important {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+}
+@media (min-width:1400px) {
+  .landingPage-container .landingPage-top-left-content-important {
+    row-gap: 30px;
+  }
+}
+.landingPage-container .landingPage-top-left-content-important-paragraph p {
+  width: 65%;
+  text-transform: uppercase;
+}
+.landingPage-container .landingPage-top-left-content-important-paragraph p span {
+  color: #f18f01;
+}
+@media (max-width:991.98px) {
+  .landingPage-container .landingPage-top-left-content-important-paragraph p {
+    font-size: 20px;
+    width: 70%;
+  }
+}
+@media (min-width:1400px) {
+  .landingPage-container .landingPage-top-left-content-important-paragraph p {
+    font-size: 62px;
+  }
+}
+.landingPage-container .landingPage-top-left-content-important-button {
+  color: white;
+  padding: 16px 24px;
+  font-size: 20px;
+  border-radius: 25px;
+  width: 30%;
+  text-align: center;
+}
+.landingPage-container .landingPage-top-left-olderThan {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  row-gap: 1.7rem;
+  height: 60vh;
+  width: 66vw;
+}
+@media screen and (max-width: 539px) {
+  .landingPage-container .landingPage-top-left-olderThan {
+    font-size: 1.2rem;
+    padding: 1.8rem;
+    width: 100%;
+    justify-content: flex-end;
+    padding-bottom: 34%;
+  }
+}
+@media screen and (max-width: 380px) {
+  .landingPage-container .landingPage-top-left-olderThan {
+    padding-bottom: 16%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 982px) {
+  .landingPage-container .landingPage-top-left-olderThan {
+    width: 80%;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-descriptionFirst {
+  width: 80%;
+  font-size: 1.4rem;
+  text-align: center;
+  line-height: 1.5;
+}
+@media screen and (max-width: 281px) {
+  .landingPage-container .landingPage-top-left-olderThan-descriptionFirst #actualQuestion {
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 982px) {
+  .landingPage-container .landingPage-top-left-olderThan-descriptionFirst {
+    width: 100%;
+    font-size: 1.8rem;
+  }
+}
+@media (max-width:991.98px) {
+  .landingPage-container .landingPage-top-left-olderThan-descriptionFirst {
+    font-size: 18px;
+    line-height: 1.4;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 982px) {
+  .landingPage-container .landingPage-top-left-olderThan-descriptionFirst {
+    font-size: 20px;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-descriptionFirst-thankYou {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  row-gap: 20px;
+}
+@media screen and (max-width: 281px) {
+  .landingPage-container .landingPage-top-left-olderThan-descriptionFirst-thankYou {
+    font-size: 12px;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-title {
+  background: transparent;
+  text-align: center;
+  width: 85%;
+  font-size: 3.8rem;
+  font-family: playfairDisplay;
+  color: #000;
+  line-height: 1;
+  font-weight: 400;
+}
+@media screen and (max-width: 982px) {
+  .landingPage-container .landingPage-top-left-olderThan-title {
+    width: 100%;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-checkBoxList {
+  width: 100%;
+  display: flex;
+  margin-top: 8px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  row-gap: 1.5rem;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+@media (max-width:991.98px) {
+  .landingPage-container .landingPage-top-left-olderThan-checkBoxList {
+    font-size: 18px !important;
+    width: 100%;
+  }
+}
+@media (min-width:1400px) {
+  .landingPage-container .landingPage-top-left-olderThan-checkBoxList {
+    width: 70%;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-checkBoxList p {
+  font-size: 16px;
+  font-weight: 400;
+  margin-top: 10px;
+}
+@media (max-width:991.98px) {
+  .landingPage-container .landingPage-top-left-olderThan-checkBoxList p {
+    font-size: 20px;
+  }
+}
+@media (min-width:1400px) {
+  .landingPage-container .landingPage-top-left-olderThan-checkBoxList p {
+    font-size: 24px;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-checkBoxList div {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: row;
+  -moz-column-gap: 14px;
+       column-gap: 14px;
+  cursor: pointer;
+}
+@media (min-width:1400px) {
+  .landingPage-container .landingPage-top-left-olderThan-checkBoxList div {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+}
+@media (max-width:991.98px) {
+  .landingPage-container .landingPage-top-left-olderThan-checkBoxList div {
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-checkBoxList div input {
+  margin-top: 3px;
+  display: none;
+}
+.landingPage-container .landingPage-top-left-olderThan-checkBoxList div .customCheckboxQuestion {
+  height: 1.2rem;
+  width: 1.2rem;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+}
+@media (max-width:991.98px) {
+  .landingPage-container .landingPage-top-left-olderThan-checkBoxList div .customCheckboxQuestion {
+    border: 1px solid #000;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-checkBoxList div .customCheckboxQuestion img {
+  scale: 0;
+  opacity: 0;
+  height: 0.8rem;
+  width: 0.9rem;
+}
+@media (max-width:991.98px) {
+  .landingPage-container .landingPage-top-left-olderThan-checkBoxList div .customCheckboxQuestion img {
+    height: 13px;
+    width: 13px;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-checkBoxList div .customCheckboxQuestion_input:checked + .customCheckboxQuestion img {
+  opacity: 1;
+  scale: 0.8;
+  color: #f7c5c5;
+  color: black;
+}
+.landingPage-container .landingPage-top-left-olderThan-checkBoxList div label {
+  position: relative;
+  top: 0;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 1.2rem;
+}
+@media (max-width:991.98px) {
+  .landingPage-container .landingPage-top-left-olderThan-checkBoxList div label {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 982px) {
+  .landingPage-container .landingPage-top-left-olderThan-checkBoxList div label {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 281px) {
+  .landingPage-container .landingPage-top-left-olderThan-checkBoxList div label {
+    font-size: 12px;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-choose {
+  display: none;
+  width: 80%;
+  text-align: center;
+  font-size: 1.2rem;
+}
+@media (max-width:991.98px) {
+  .landingPage-container .landingPage-top-left-olderThan-choose {
+    font-size: 16px !important;
+  }
+}
+@media (max-width:380px) {
+  .landingPage-container .landingPage-top-left-olderThan-choose {
+    font-size: 12px !important;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-buttons {
+  align-self: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: 90%;
+  -moz-column-gap: 4%;
+       column-gap: 4%;
+}
+@media screen and (max-width: 767px) {
+  .landingPage-container .landingPage-top-left-olderThan-buttons {
+    width: 115%;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-buttons-left {
+  align-items: center;
+  text-align: center;
+  border-radius: 0.25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  width: 38%;
+  cursor: pointer;
+}
+@media screen and (max-width: 767px) {
+  .landingPage-container .landingPage-top-left-olderThan-buttons-left {
+    font-size: 1.4rem;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-buttons-left img {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: auto;
+  width: 100%;
+  display: block;
+}
+.landingPage-container .landingPage-top-left-olderThan-buttons-left #yesButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.landingPage-container .landingPage-top-left-olderThan-buttons-right {
+  align-items: center;
+  text-align: center;
+  border-radius: 0.25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  width: 34%;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .landingPage-container .landingPage-top-left-olderThan-buttons-right {
+    font-size: 1.4rem;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-buttons-right #noButton {
+  text-align: center;
+  position: absolute;
+  color: white;
+}
+.landingPage-container .landingPage-top-left-olderThan-buttons-right img {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: auto;
+  display: block;
+  width: 100%;
+}
+.landingPage-container .landingPage-top-left-olderThan-buttons-continue {
+  background: url("image/ellipse.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  align-items: center;
+  text-align: center;
+  border-radius: 0.25rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  width: 38%;
+  display: none;
+}
+@media screen and (max-width: 767px) {
+  .landingPage-container .landingPage-top-left-olderThan-buttons-continue {
+    font-size: 1.4rem;
+  }
+}
+.landingPage-container .landingPage-top-left-olderThan-buttons-continue img {
+  display: block;
+  -o-object-fit: contain;
+     object-fit: contain;
+  height: auto;
+  display: block;
+  width: 100%;
+}
+.landingPage-container .landingPage-top-left-olderThan-buttons-continue #yesButton {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}/*# sourceMappingURL=main.css.map */
