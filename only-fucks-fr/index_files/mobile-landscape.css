@@ -1,0 +1,102 @@
+.mobile-landscape-warning {
+  display: none;
+}
+
+@media only screen and (max-width: 1023px) and (orientation: landscape) and (pointer: coarse) and (min-aspect-ratio: 2/1) {
+  .mobile-landscape-warning {
+    display: block;
+  }
+
+  .bg_slider,
+  .wraper {
+    display: none;
+  }
+
+  @keyframes rotateArrow {
+    0% {
+      transform: rotate(-30deg);
+    }
+
+    40% {
+      transform: rotate(0deg);
+    }
+
+    60% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(-30deg);
+    }
+  }
+
+  .mobile-landscape-warning {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(to right, #00f9e1 0, #6301a8 50%, #00f9e1 100%);
+    z-index: 999;
+  }
+
+  .mobile-landscape-warning__box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    height: 200px;
+    width: 175px;
+    padding: 25px;
+    text-align: center;
+  }
+
+  .mobile-landscape-warning__icon-box {
+    width: 80px;
+    height: 80px;
+    margin: 0px auto;
+    position: relative;
+    background-image: url(../images/landscape-tablets.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  .mobile-landscape-warning__icon-box::after {
+    content: '';
+    position: absolute;
+    width: 5vh;
+    height: 5vh;
+    top: 0;
+    right: 30%;
+    background-image: url(../images/landscape-arrow.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    -webkit-transform-origin: left bottom;
+    -ms-transform-origin: left bottom;
+    transform-origin: left bottom;
+    -webkit-animation: rotateArrow 2s linear infinite;
+    animation: rotateArrow 2s linear infinite;
+  }
+
+  .mobile-landscape-warning__box p {
+    font: inherit;
+    font-size: 15px;
+    color: white;
+    text-align: center;
+  }
+}
