@@ -1,0 +1,70 @@
+$(document).ready(function () {
+  var date = new Date();
+  var this_year = date.getFullYear();
+  $('.text_year').html(this_year);
+
+  // Einstellung der benutzerdefinierten Seitenauswahl
+  $('.item07 ul li, .item08 ul li, .item09 ul li, .item10 ul li, .item11 ul li').click(function () {
+    $(this).toggleClass('selected');
+  });
+
+  $('.item12 ul li').click(function () {
+    $(this).addClass('selected').siblings().removeClass('selected');
+    $('.item12 .next.btn').removeClass('disable');
+  });
+
+  // Weiter-Effekt für die nächste Seite
+  $('.next').on('click', function (e) {
+    e.preventDefault();
+    var num = parseInt($(this).closest('.item').attr('page')) + 1;
+
+    if (!$(this).hasClass('disable')) {
+      $('body').attr('page', num);
+      $(this).closest('.item').hide().next('div.item').show();
+    }
+
+    if (num == '13') {
+      setTimeout(function () {
+        $('.item13 .loading p').html('Ihr Profil wird erstellt...');
+        $('.item13 .loading .process_bar').attr('process', '1');
+      }, 500);
+      setTimeout(function () {
+        $('.item13 .loading p').html('Suche nach Frauen, die mit Ihren Antworten kompatibel sind...');
+        $('.item13 .loading .process_bar').attr('process', '2');
+      }, 2000);
+      setTimeout(function () {
+        $('.item13 .loading p').html('Es gibt ' + ran + ' Frauen, die zu Ihrem Profil passen...');
+        $('.item13 .loading .process_bar').attr('process', '3');
+      }, 4000);
+      setTimeout(function () {
+        $('.item13 .loading p').html('Herzlichen Glückwunsch! Sie haben die Auswahl bestanden.');
+        $('.item13 .loading .process_bar').attr('process', '4');
+      }, 6000);
+      setTimeout(function () {
+        $('.item13 .loading p').html('Sie sind zugelassen.');
+        $('.item13 .loading .process_bar').attr('process', '5');
+      }, 8000);
+      setTimeout(function () {
+        $('body').attr('page', 14);
+        $('.item13').hide().next('div.item').show();
+      }, 10000);
+    }
+  });
+
+  // Hintergrundbild-Slider
+  var imgIndex = 0;
+  bgAutoPlay();
+  setInterval(bgAutoPlay, 3000);
+
+  // Zufällige Mitgliederzahl für Seite 11 zwischen 50 und 99 setzen
+  var ran = Math.floor(Math.random() * (99 - 50 + 1)) + 50;
+  $('.girl_num').html(ran);
+
+  function bgAutoPlay() {
+    if (imgIndex == 5) {
+      imgIndex = 0;
+    }
+    $('.bg_slider .bg_' + (imgIndex + 1)).fadeIn(1000).siblings().fadeOut(1000);
+    imgIndex++;
+  }
+});
