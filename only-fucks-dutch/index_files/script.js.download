@@ -1,0 +1,82 @@
+$(document).ready(function () {
+  var date = new Date();
+  var this_year = date.getFullYear();
+  $('.text_year').html(this_year);
+
+  // Instellen van aangepaste paginaselector
+  $(
+    '.item07 ul li, .item08 ul li, .item09 ul li, .item10 ul li, .item11 ul li'
+  ).click(function () {
+    $(this).toggleClass('selected');
+  });
+
+  $('.item12 ul li').click(function () {
+    $(this).addClass('selected').siblings().removeClass('selected');
+    $('.item12 .next.btn').removeClass('disable');
+  });
+
+  // Effect voor volgende pagina
+  $('.next').on('click', function (e) {
+    e.preventDefault();
+    var num = parseInt($(this).closest('.item').attr('page')) + 1;
+
+    if (!$(this).hasClass('disable')) {
+      $('body').attr('page', num);
+      $(this).closest('.item').hide().next('div.item').show();
+    }
+
+    // Simulatie van proces voor pagina 13
+    if (num == '13') {
+      setTimeout(function () {
+        $('.item13 .loading p').html('Je profiel wordt opgebouwd...');
+        $('.item13 .loading .process_bar').attr('process', '1');
+      }, 500);
+      setTimeout(function () {
+        $('.item13 .loading p').html(
+          'Zoeken naar vrouwen die compatibel zijn met jouw antwoorden...'
+        );
+        $('.item13 .loading .process_bar').attr('process', '2');
+      }, 2000);
+      setTimeout(function () {
+        $('.item13 .loading p').html(
+          'Er zijn ' + ran + ' vrouwen die bij jouw profiel passen...'
+        );
+        $('.item13 .loading .process_bar').attr('process', '3');
+      }, 4000);
+      setTimeout(function () {
+        $('.item13 .loading p').html(
+          'Gefeliciteerd! Je bent door de selectie heen.'
+        );
+        $('.item13 .loading .process_bar').attr('process', '4');
+      }, 6000);
+      setTimeout(function () {
+        $('.item13 .loading p').html('Je bent goedgekeurd om door te gaan.');
+        $('.item13 .loading .process_bar').attr('process', '5');
+      }, 8000);
+      setTimeout(function () {
+        $('body').attr('page', 14);
+        $('.item13').hide().next('div.item').show();
+      }, 10000);
+    }
+  });
+
+  // Achtergrondafbeelding slider
+  var imgIndex = 0;
+  bgAutoPlay();
+  setInterval(bgAutoPlay, 3000);
+
+  // Instellen van willekeurig aantal leden voor pagina 11 (tussen 50 en 99)
+  var ran = Math.floor(Math.random() * (99 - 50 + 1)) + 50;
+  $('.girl_num').html(ran);
+
+  function bgAutoPlay() {
+    if (imgIndex == 5) {
+      imgIndex = 0;
+    }
+    $('.bg_slider .bg_' + (imgIndex + 1))
+      .fadeIn(1000)
+      .siblings()
+      .fadeOut(1000);
+    imgIndex++;
+  }
+});
