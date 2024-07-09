@@ -3,7 +3,7 @@ $(document).ready(function () {
   var this_year = date.getFullYear();
   $('.text_year').html(this_year);
 
-  //setting custom page selector
+  //ustawienie niestandardowego selektora stron
   $(
     '.item07 ul li, .item08 ul li, .item09 ul li, .item10 ul li, .item11 ul li'
   ).click(function () {
@@ -15,7 +15,7 @@ $(document).ready(function () {
     $('.item12 .next.btn').removeClass('disable');
   });
 
-  //next page effect
+  //efekt przejścia na następną stronę
   $('.next').on('click', function (e) {
     e.preventDefault();
     var num = parseInt($(this).closest('.item').attr('page')) + 1;
@@ -27,29 +27,29 @@ $(document).ready(function () {
 
     if (num == '13') {
       setTimeout(function () {
-        $('.item13 .loading p').html('Building your profile...');
+        $('.item13 .loading p').html('Tworzenie twojego profilu...');
         $('.item13 .loading .process_bar').attr('process', '1');
       }, 500);
       setTimeout(function () {
         $('.item13 .loading p').html(
-          'Seeking women compatible with your answers...'
+          'Szukamy kobiet zgodnych z twoimi odpowiedziami...'
         );
         $('.item13 .loading .process_bar').attr('process', '2');
       }, 2000);
       setTimeout(function () {
         $('.item13 .loading p').html(
-          'There are ' + ran + ' women that match your profile...'
+          'Jest ' + ran + ' kobiet, które pasują do twojego profilu...'
         );
         $('.item13 .loading .process_bar').attr('process', '3');
       }, 4000);
       setTimeout(function () {
         $('.item13 .loading p').html(
-          'Congratulations! You have passed the selection.'
+          'Gratulacje! Przeszedłeś selekcję.'
         );
         $('.item13 .loading .process_bar').attr('process', '4');
       }, 6000);
       setTimeout(function () {
-        $('.item13 .loading p').html('You are approved to enter.');
+        $('.item13 .loading p').html('Zostałeś zatwierdzony do wejścia.');
         $('.item13 .loading .process_bar').attr('process', '5');
       }, 8000);
       setTimeout(function () {
@@ -64,7 +64,7 @@ $(document).ready(function () {
   bgAutoPlay();
   setInterval(bgAutoPlay, 3000);
 
-  // set Page11 random member 50-99
+  // ustawienie losowego członka na stronie 11 (50-99)
   var ran = Math.floor(Math.random() * (99 - 50 + 1)) + 50;
   $('.girl_num').html(ran);
 
